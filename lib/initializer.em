@@ -1,6 +1,6 @@
 Em.onLoad 'Ember.Application', (application) ->
   application.initializer
-    name: 'ember-auth-module-ember-data'
+    name: 'ember-auth.module.ember-data'
     after: 'ember-auth'
 
     initialize: (container, app) ->
