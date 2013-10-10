@@ -1,5 +1,7 @@
 # ember-data integration module for ember-auth
 
+[![Build Status](https://secure.travis-ci.org/heartsentwined/ember-auth-module-ember-data.png)](http://travis-ci.org/heartsentwined/ember-auth-module-ember-data)
+
 1. injects signed in session data (if any) to all ember-data server requests
 2. optional: auto-loads an ember-data user model upon sign in
 
