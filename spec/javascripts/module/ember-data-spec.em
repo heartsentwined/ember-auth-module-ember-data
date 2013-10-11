@@ -19,7 +19,7 @@ describe 'Em.Auth.EmberDataAuthModule', ->
     afterEach ->
       Em.run ->
         auth.userId = null
-        auth.emberData.userModel = null
+        emberData.config.userModel = null
 
     describe 'userId not set', ->
       beforeEach -> Em.run -> auth.userId = null
@@ -29,7 +29,7 @@ describe 'Em.Auth.EmberDataAuthModule', ->
         expect(spy).not.toHaveBeenCalled()
 
     describe 'userModel not set', ->
-      beforeEach -> Em.run -> auth.emberData.userModel = null
+      beforeEach -> Em.run -> emberData.config.userModel = null
 
       it 'does nothing', ->
         Em.run -> emberData.findUser()
@@ -39,7 +39,7 @@ describe 'Em.Auth.EmberDataAuthModule', ->
       beforeEach -> Em.run -> auth.userId = 1
 
       describe 'userModel set', ->
-        beforeEach -> Em.run -> auth.emberData.userModel = 'foo'
+        beforeEach -> Em.run -> emberData.config.userModel = 'foo'
 
         it 'delegates to store#find', ->
           Em.run -> emberData.findUser()
